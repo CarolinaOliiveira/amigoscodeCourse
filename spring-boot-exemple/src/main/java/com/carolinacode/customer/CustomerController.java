@@ -1,13 +1,12 @@
 package com.carolinacode.customer;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 
 @RestController
+@RequestMapping("api/v1/customers")
 public class CustomerController {
 
     private final CustomerService customerService;
@@ -16,15 +15,28 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    @GetMapping("api/v1/customers")
+    @GetMapping()
     public List<Customer> getCustomers(){
         return customerService.getAllCostumers();
     }
 
-    @GetMapping("api/v1/customers/{id}")
+    @GetMapping("{id}")
     public Customer getCustomer(@PathVariable("id") Integer id){
         return customerService.getCustomer(id);
     }
 
+    @PostMapping
+    public void RegisterCustomer(@RequestBody CustomerRegistrationResquest request){
+        customerService.addCustomer(request);
+    }
 
+    @DeleteMapping("{id}")
+    public void deleteCustomer(@PathVariable("id") Integer id){
+        customerService.deleteCustomer(id);
+    }
+
+    @PutMapping("{id}")
+    public void updateCustomer(@RequestBody CustomerUpdateRequest request, @PathVariable("id") Integer id){
+        customerService.updateCustomer(id, request);
+    }
 }
