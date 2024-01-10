@@ -32,7 +32,7 @@ public class Main {
 
             Customer jamila = new Customer ("Jamila", "jamila@gmail.com", 19);
             List <Customer> customers = List.of(alex, jamila);
-            customerRepository.saveAll(customers);
+            //customerRepository.saveAll(customers);
         };
     }
 
