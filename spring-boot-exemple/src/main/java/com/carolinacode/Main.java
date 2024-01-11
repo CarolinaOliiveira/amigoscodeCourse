@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Random;
 
 @SpringBootApplication
 public class Main {
@@ -28,11 +29,14 @@ public class Main {
     CommandLineRunner runner(CustomerRepository customerRepository){
 
         return args -> {
-            Customer alex = new Customer("Alex", "alex@gmail.com", 21);
+           /* var faker = new Faker();
+            Random random = new Random();
+            Customer customer = new Customer(
+                    faker.name().fullName(),
+                    faker.internet().safeEmailAddress(),
+                    random.nextInt(16,99));
 
-            Customer jamila = new Customer ("Jamila", "jamila@gmail.com", 19);
-            List <Customer> customers = List.of(alex, jamila);
-            //customerRepository.saveAll(customers);
+            customerRepository.save(customer);*/
         };
     }
 
