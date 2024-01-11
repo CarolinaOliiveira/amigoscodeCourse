@@ -1,0 +1,9 @@
+abrir o docker:
+ docker exec -it postgres bash
+
+entrar na db customer:
+ psql -U amigoscode -d customer
+
+limpar a base de dados:
+delete from flyway_schema_history;
+drop table customer;
