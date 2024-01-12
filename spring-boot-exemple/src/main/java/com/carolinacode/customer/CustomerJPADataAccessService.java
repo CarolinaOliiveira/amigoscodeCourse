@@ -5,6 +5,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
+//Realizar acesso aos dados com spring JPA
+
 @Repository("jpa")
 public class CustomerJPADataAccessService implements CustomerDAO{
 

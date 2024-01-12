@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Optional;
 
 
+//aceder aos dados com JDBC. JDBC deve ser usado quando existem queries complexas que têm de ser feitas à base de dados. Caso contrario JPA é o mais indicado porque tira a responsabilidade de escrever sql
+
 @Repository("jdbc")
 public class CustomerJDBCDataAccessService implements CustomerDAO {
 
