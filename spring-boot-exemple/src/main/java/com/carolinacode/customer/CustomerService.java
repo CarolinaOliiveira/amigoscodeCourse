@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+//Business Layer
 @Service
 public class CustomerService {
 
@@ -71,7 +73,7 @@ public class CustomerService {
 
         //mensagem de erro por não haver nada a alterar
         if (!changes)
-            throw new RequestValidationException("no data changes found");
+           throw new RequestValidationException("no data changes found");
 
         customerDao.updateCustomer(oldCustomer);
     }
