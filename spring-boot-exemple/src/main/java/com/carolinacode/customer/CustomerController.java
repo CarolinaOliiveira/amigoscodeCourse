@@ -26,7 +26,7 @@ public class CustomerController {
     }
 
     @PostMapping
-    public void RegisterCustomer(@RequestBody CustomerRegistrationResquest request){
+    public void RegisterCustomer(@RequestBody CustomerRegistrationRequest request){
         customerService.addCustomer(request);
     }
 

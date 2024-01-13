@@ -29,7 +29,7 @@ public class CustomerService {
                 .orElseThrow(()-> new ResourceNotFoundException("Customer with id [%s] not found".formatted(id)));
     }
 
-    public void addCustomer (CustomerRegistrationResquest customerRegistrationRequest){
+    public void addCustomer (CustomerRegistrationRequest customerRegistrationRequest){
         //check if email exists, if not add customer
         String email = customerRegistrationRequest.email();
         if(customerDao.existsPersonWithEmail(email))

@@ -1,6 +1,6 @@
 package com.carolinacode.customer;
 
-public record CustomerRegistrationResquest (
+public record CustomerRegistrationRequest(
     String name,
     String email,
     Integer age
