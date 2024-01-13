@@ -4,6 +4,7 @@ package com.carolinacode.jouney;
 import com.carolinacode.customer.Customer;
 import com.carolinacode.customer.CustomerRegistrationRequest;
 import com.carolinacode.customer.CustomerService;
+import com.carolinacode.customer.CustomerUpdateRequest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -79,5 +80,122 @@ public class CustomerIntegrationTest {
                 .expectStatus().isOk()
                 .expectBody(new ParameterizedTypeReference<Customer>() {})
                 .isEqualTo(expectedCustomer);
+    }
+
+    @Test
+    void canDeleteCustomer() {
+        //create a registration request
+        String name = "cata";
+        String email = "cata@gmail.com";
+        int age = 23;
+        CustomerRegistrationRequest request = new CustomerRegistrationRequest(
+                name, email, age
+        );
+
+        //send post request
+        webTestClient.post()
+                .uri(uri)
+                .accept(MediaType.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(Mono.just(request), CustomerRegistrationRequest.class)
+                .exchange()
+                .expectStatus().isOk();
+
+        //get all customers
+        List<Customer> allCustomers = webTestClient.get()
+                .uri(uri)
+                .accept(MediaType.APPLICATION_JSON)
+                .exchange()
+                .expectStatus().isOk()
+                .expectBodyList(new ParameterizedTypeReference<Customer>() {})
+                .returnResult()
+                .getResponseBody();
+
+        //get the of the customer registered
+        var id = allCustomers.stream()
+                .filter(customer -> customer.getEmail().equals(email))
+                .map(c -> c.getId())
+                .findFirst()
+                .orElseThrow();
+
+
+        //delete customer with id
+        webTestClient.delete()
+                        .uri(uri + "/{id}", id)
+                        .accept(MediaType.APPLICATION_JSON)
+                        .exchange()
+                        .expectStatus()
+                        .isOk();
+
+        //get customer by id
+        webTestClient.get()
+                .uri(uri + "/{id}", id)
+                .accept(MediaType.APPLICATION_JSON)
+                .exchange()
+                .expectStatus()
+                .isNotFound();
+    }
+
+    @Test
+    void canUpdateCustomer(){
+        //create a registration request
+        String name = "car";
+        String email = "car@gmail.com";
+        int age = 23;
+        CustomerRegistrationRequest request = new CustomerRegistrationRequest(
+                name, email, age
+        );
+
+        //send post request
+        webTestClient.post()
+                .uri(uri)
+                .accept(MediaType.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(Mono.just(request), CustomerRegistrationRequest.class)
+                .exchange()
+                .expectStatus().isOk();
+
+        //get all customers
+        List<Customer> allCustomers = webTestClient.get()
+                .uri(uri)
+                .accept(MediaType.APPLICATION_JSON)
+                .exchange()
+                .expectStatus().isOk()
+                .expectBodyList(new ParameterizedTypeReference<Customer>() {})
+                .returnResult()
+                .getResponseBody();
+
+        //get customer by id
+        var id = allCustomers.stream()
+                .filter(customer -> customer.getEmail().equals(email))
+                .map(c -> c.getId())
+                .findFirst()
+                .orElseThrow();
+
+        String newName = "caro";
+        String newEmail = "caro@gmail.com";
+        CustomerUpdateRequest updateRequest = new CustomerUpdateRequest(newName, newEmail, null);
+        Customer expectedCustomer = new Customer(id, newName, newEmail, age);
+
+        //fazer update do customer
+        webTestClient.put()
+                        .uri(uri + "/{id}", id)
+                        .accept(MediaType.APPLICATION_JSON)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .body(Mono.just(updateRequest), CustomerUpdateRequest.class)
+                        .exchange()
+                        .expectStatus().isOk();
+
+        //ir buscar o cliente e verificar que se ele foi atualizado
+        Customer updatedCustomer = webTestClient.get()
+                .uri(uri + "/{id}", id)
+                .accept(MediaType.APPLICATION_JSON)
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody(Customer.class)
+                .returnResult()
+                .getResponseBody();
+
+        assertThat(updatedCustomer).isEqualTo(expectedCustomer);
     }
 }
