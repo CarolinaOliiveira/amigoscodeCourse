@@ -85,8 +85,8 @@ public class CustomerIntegrationTest {
     @Test
     void canDeleteCustomer() {
         //create a registration request
-        String name = "cata";
-        String email = "cata@gmail.com";
+        String name = "cate";
+        String email = "cate@gmail.com";
         int age = 23;
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
                 name, email, age
