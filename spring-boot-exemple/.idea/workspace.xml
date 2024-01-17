@@ -5,78 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Dockerrun.aws.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/notas terminal.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/customer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/customer/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/customer/CustomerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/customer/CustomerJDBCDataAccessService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/customer/CustomerJPADataAccessService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/customer/CustomerListDataAccessService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/customer/CustomerRegistrationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/customer/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/customer/CustomerRowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/customer/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/customer/CustomerUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/exception/DuplicateResourceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/exception/RequestValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/db/migration/V1__Initial_Setup.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/db/migration/V2__Add_unique_constraint_customer_email_unique.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/carolinacode/AbstractTestContainers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/carolinacode/TestContainersTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/carolinacode/customer/CustomerJDBCDataAccessServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/carolinacode/customer/CustomerJPADataAccessServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/carolinacode/customer/CustomerRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/carolinacode/customer/CustomerRowMapperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/carolinacode/customer/CustomerServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/carolinacode/jouney/CustomerIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerrun.aws.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notas terminal.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/customer/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/customer/CustomerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/customer/CustomerDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/customer/CustomerJDBCDataAccessService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/customer/CustomerJPADataAccessService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/customer/CustomerListDataAccessService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/customer/CustomerRegistrationRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/customer/CustomerRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/customer/CustomerRowMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/customer/CustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/customer/CustomerUpdateRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/exception/DuplicateResourceException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/exception/RequestValidationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carolinacode/exception/ResourceNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Initial_Setup.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_unique_constraint_customer_email_unique.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/carolinacode/AbstractTestContainers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/carolinacode/TestContainersTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/carolinacode/customer/CustomerJDBCDataAccessServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/carolinacode/customer/CustomerJPADataAccessServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/carolinacode/customer/CustomerRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/carolinacode/customer/CustomerRowMapperTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/carolinacode/customer/CustomerServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/carolinacode/jouney/CustomerIntegrationTest.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +102,13 @@
       <recent name="com.carolinacode.customer" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
   <component name="RunManager" selected="Spring Boot.Main">
     <configuration name="CustomerIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-boot-exemple" />
@@ -243,6 +183,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="amigoscode-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.carolinacode.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" />
       <module name="spring-boot-exemple" />
@@ -257,11 +204,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="amigoscode-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.carolinacode.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.CustomerIntegrationTest" />
       <item itemvalue="JUnit.CustomerRepositoryTest" />
       <item itemvalue="JUnit.CustomerRowMapperTest" />
       <item itemvalue="JUnit.CustomerServiceTest" />
+      <item itemvalue="Spring Boot.Main (2)" />
       <item itemvalue="Spring Boot.Main" />
     </list>
     <recent_temporary>
@@ -298,6 +254,8 @@
       <workItem from="1705513104829" duration="99000" />
       <workItem from="1705513272578" duration="11000" />
       <workItem from="1705513393299" duration="10000" />
+      <workItem from="1705513856480" duration="315000" />
+      <workItem from="1705514174932" duration="538000" />
     </task>
     <servers />
   </component>
