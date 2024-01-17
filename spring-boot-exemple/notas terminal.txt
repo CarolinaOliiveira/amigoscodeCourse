@@ -7,3 +7,17 @@ entrar na db customer:
 limpar a base de dados:
 delete from flyway_schema_history;
 drop table customer;
+
+
+(dps de mvn package) Criar a imagem do docker e dar push para o docker hub
+ mvn compile jib:build
+
+ para correr o container do backend API, correr o comando
+ docker run --name amigoscode-api --rm -p8080:8080 --network spring-boot-exemple_db pg47101/amigoscode-api --spring.datasource.url=jdbc:postgresql://db:5432/customer
+ NOTAS:
+ - --network spring-boot-exemple_db utiliza a rede do container do postgres para conseguirem comunicar
+ - --spring.datasource.url=jdbc:postgresql://db:5432/customer muda a datasource do application.yml, para comunicar com a porta aberta no constainer da base de dados (db)
+ - este comando é depois substituido no docker compose para automatizar o processo
+
+para entrar na ec2 :
+ssh -i .\amigoscode.pem ec2-user@15.188.186.124
