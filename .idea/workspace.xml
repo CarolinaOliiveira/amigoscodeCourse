@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="workflow para o git actions" />
+    <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="workflow para o git actions">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +179,7 @@
       <workItem from="1705515479232" duration="903000" />
       <workItem from="1705533452607" duration="3507000" />
       <workItem from="1705538211537" duration="35000" />
-      <workItem from="1705538259396" duration="2557000" />
+      <workItem from="1705538259396" duration="1878000" />
     </task>
     <task id="LOCAL-00001" summary="workflow para o git actions">
       <created>1705538658122</created>
