@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
-    <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="break existsPersonWithEmail (ver se o workflow falha)">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/notas terminal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/notas terminal.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-
+    <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/PingPongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/PingPongController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +36,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
@@ -184,12 +179,10 @@
       <workItem from="1705515479232" duration="903000" />
       <workItem from="1705533452607" duration="3507000" />
       <workItem from="1705538211537" duration="35000" />
-
       <workItem from="1705538259396" duration="18000" />
       <workItem from="1705541948267" duration="150000" />
       <workItem from="1705592018692" duration="7705000" />
       <workItem from="1705664983708" duration="1971000" />
-
     </task>
     <task id="LOCAL-00001" summary="workflow para o git actions">
       <created>1705538658122</created>
