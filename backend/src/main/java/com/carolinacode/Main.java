@@ -12,10 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Random;
+
 
 @SpringBootApplication
 public class Main {
@@ -23,6 +20,7 @@ public class Main {
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext =
                 SpringApplication.run(Main.class, args);
+
     }
 
     @Bean

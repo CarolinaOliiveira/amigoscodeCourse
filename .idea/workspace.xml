@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="break existsPersonWithEmail (ver se o workflow falha)">
       <change afterPath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/notas terminal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/notas terminal.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,11 +184,21 @@
       <workItem from="1705515479232" duration="903000" />
       <workItem from="1705533452607" duration="3507000" />
       <workItem from="1705538211537" duration="35000" />
+
       <workItem from="1705538259396" duration="18000" />
       <workItem from="1705541948267" duration="150000" />
       <workItem from="1705592018692" duration="7705000" />
       <workItem from="1705664983708" duration="1971000" />
+
     </task>
+    <task id="LOCAL-00001" summary="workflow para o git actions">
+      <created>1705538658122</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705538658122</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -213,6 +225,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="workflow para o git actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="workflow para o git actions" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CustomerJPADataAccessService_java$CustomerRowMapperTest.ic" NAME="CustomerRowMapperTest Coverage Results" MODIFIED="1705110799380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
