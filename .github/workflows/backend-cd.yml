@@ -49,7 +49,7 @@ jobs:
         run: echo "BUILD_NUMBER=$(date '+%d.%m.%Y.%H.%M.%S')" >> $GITHUB_OUTPUT
       - name: Send Slack Message
         run: >
-          curl && curl -X POST -H 'Content-type: application/json' 
+          curl -X POST -H 'Content-type: application/json' 
           --data '
           {"text":" :maven: Building with maven"}
           ' 
@@ -58,7 +58,7 @@ jobs:
         run: mvn -ntp -B verify -D docker.image.tag=${{steps.build-number.outputs.BUILD_NUMBER}} jib:build
       - name: Send Slack Message
         run: >
-          curl && curl -X POST -H 'Content-type: application/json' 
+          curl -X POST -H 'Content-type: application/json' 
           --data '
           {"text":":docker: Image tag: ${{steps.build-number.outputs.BUILD_NUMBER}} pushed to docker hub"}
           ' 
@@ -72,7 +72,7 @@ jobs:
           cat Dockerrun.aws.json
       - name: Send Slack Message
         run: >
-          curl && curl -X POST -H 'Content-type: application/json' 
+          curl -X POST -H 'Content-type: application/json' 
           --data '
           {"text":":aws: Starting deployment to EBS"}
           ' 
@@ -90,7 +90,7 @@ jobs:
           deployment_package: backend/Dockerrun.aws.json
       - name: Send Slack Message
         run: >
-          curl && curl -X POST -H 'Content-type: application/json' 
+          curl -X POST -H 'Content-type: application/json' 
           --data '
           {"text":":githubloading: Commiting to repo"}
           ' 
@@ -104,7 +104,7 @@ jobs:
           git push
       - name: Send Slack Message
         run: >
-          curl && curl -X POST -H 'Content-type: application/json' 
+          curl -X POST -H 'Content-type: application/json' 
           --data '
           {"text":":party_blob Deployment and commit complete"}
           ' 
