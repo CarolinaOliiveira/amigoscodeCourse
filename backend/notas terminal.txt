@@ -21,3 +21,6 @@ drop table customer;
 
 para entrar na ec2 :
 ssh -i .\amigoscode.pem ec2-user@15.188.186.124
+
+Restart environment:
+eb restore e-cpppbiucth
