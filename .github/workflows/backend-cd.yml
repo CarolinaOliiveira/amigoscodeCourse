@@ -48,10 +48,10 @@ jobs:
         run: mvn -ntp -B verify -D docker.image.tag=${{steps.build-number.outputs.BUILD_NUMBER}} jib:build
       - name: Update Dockerrun.aws.json api image tag with build number
         run: |
-          echo "Dockerrun.aws.json before updating tag
+          echo "Dockerrun.aws.json before updating tag"
           cat Dockerrun.aws.json
           sed -i -E 's_(pg47101/amigoscode-api:)([^"]*)_\1'${{steps.build-number.outputs.BUILD_NUMBER}}'_' Dockerrun.aws.json
-          echo "Dockerrun.aws.json after updating tag
+          echo "Dockerrun.aws.json after updating tag"
           cat Dockerrun.aws.json
       - name: Deploy to Elastic Bean stalk
         uses: einaregilsson/beanstalk-deploy@v21
