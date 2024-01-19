@@ -33,11 +33,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Send Slack Message
         run: >
-          curl && curl -X POST -H 'Content-type: application/json' 
-          --data '
-          {"text":"Deployment started :progress_bar: :fingerscrossed:"}
-          ' 
-          ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"Deployment started :progress_bar: :fingerscrossed:"}' ${{ secrets.SLACK_WEBHOOK_URL }}
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
