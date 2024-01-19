@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/PingPongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/carolinacode/PingPongController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +16,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
