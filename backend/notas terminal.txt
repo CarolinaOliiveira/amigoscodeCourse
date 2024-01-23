@@ -24,3 +24,7 @@ ssh -i .\amigoscode.pem ec2-user@15.188.186.124
 
 Restart environment:
 eb restore e-cpppbiucth
+
+Comandos para criar a base de dados customer (correr na instancia EC2)
+- docker run --rm -it postgres:alpine bach
+- pqsl -U amighoscode -d postgres -h link_db

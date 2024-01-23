@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" afterDir="false" />
+    <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="break existsPersonWithEmail (ver se o workflow falha)">
+      <change afterPath="$PROJECT_DIR$/frontend/react/.eslintrc.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/public/vite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/src/assets/react.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/notas terminal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/notas terminal.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +48,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -84,7 +96,8 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;ba0c070a62c4d0f4b1b15c8ac7bbbda6&quot;
+    &quot;spring.configuration.checksum&quot;: &quot;ba0c070a62c4d0f4b1b15c8ac7bbbda6&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -183,6 +196,8 @@
       <workItem from="1705541948267" duration="150000" />
       <workItem from="1705592018692" duration="7705000" />
       <workItem from="1705664983708" duration="1971000" />
+      <workItem from="1706031105728" duration="1357000" />
+      <workItem from="1706032712448" duration="333000" />
     </task>
     <task id="LOCAL-00001" summary="workflow para o git actions">
       <created>1705538658122</created>
