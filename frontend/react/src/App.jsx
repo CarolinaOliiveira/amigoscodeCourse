@@ -1,82 +1,59 @@
-import UserProfile from './UserProfile.jsx'
-import { useState, useEffect } from 'react'
-
-const users = [
-    {
-        name: "Jamila",
-        age: 22,
-        gender: "FEMALE"
-    },
-    {
-        name: "Ana",
-        age: 45,
-        gender: "FEMALE"
-    },
-    {
-        name: "Alex",
-        age: 18,
-        gender: "MALE"
-    },
-    {
-        name: "Bilal",
-        age: 27,
-        gender: "MALE"
-    }
-]
-
-const UserProfiles = ( {users}) => (
-    <div>
-        < UserProfile
-            name={"Hanna"}
-            age={23}
-            imageNumber={48}
-            gender={"women"}>
-            <p>Hello</p>
-        </UserProfile>
-        {users.map((user, index) => (
-            <UserProfile
-                key = {index}
-                name = {user.name}
-                age = {user.age}
-                gender = {user.gender}
-                imageNumber={index}
-            />
-        ))}
-    </div>
-)
-
-
+import { Button, Spinner, Text, Wrap, WrapItem } from '@chakra-ui/react'
+import SidebarWithHeader from './components/shared/SideBar.jsx'
+import  { useEffect, useState } from 'react'
+import { getCustomers } from './services/client.js'
+import CardWithImage from './components/Card.jsx'
 function App() {
 
-    const [counter, setCounter] = useState(0)
-    const [isLoading, setIsLoading] = useState(false)
-
-    // acontece antes do render da página
-    //é utilizado para sincronizar com sistemas externos como APIs, para por exemplo ir buscar dados a uma API antes da página aparecer ao utilizador
-    useEffect( () => {
-        setIsLoading(true)
-        setTimeout(() => {
-            setIsLoading(false)
-        }, 4000)
+    const [customers, setCustomers] = useState([])
+    const [loading, setLoading] = useState(false)
+    useEffect(() => {
+        setLoading(true)
+        getCustomers().then(res => {
+            setCustomers(res.data)
+        }).catch(err =>{
+            console.log(err)
+        }).finally(() => {
+            setLoading(false)
+        })
     }, [])
 
-    if(isLoading) {
-        return "Loading ..."
+    if(loading) {
+        return (
+            <SidebarWithHeader>
+                <Spinner
+                    thickness='4px'
+                    speed='0.65s'
+                    emptyColor='gray.200'
+                    color='blue.500'
+                    size='xl'
+                />
+            </SidebarWithHeader>
+        )
     }
 
+    if(customers.length <= 0) {
+        return (
+            <SidebarWithHeader>
+                <Text>No customers available</Text>
+            </SidebarWithHeader>
+        )
+    }
 
+    //opção em que temos customers
     return (
-
-        <div>
-            <button onClick={() => setCounter(counter + 1)}>
-                Increment counter
-            </button>
-            <h1>{ counter }</h1>
-            <UserProfiles users = {users}/>
-        </div>
-
+        <SidebarWithHeader>
+            <Wrap justify={"center"} spacing ={'30px'}>
+                {customers.map((customer, index) => {
+                    return (
+                        <WrapItem key={index}>
+                            <CardWithImage {...customer}/>
+                        </WrapItem>
+                    )
+                })}
+            </Wrap>
+        </SidebarWithHeader>
     )
-
 }
 
 export default App
