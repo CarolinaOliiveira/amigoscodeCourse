@@ -1,10 +1,7 @@
 package com.carolinacode.jouney;
 
 
-import com.carolinacode.customer.Customer;
-import com.carolinacode.customer.CustomerRegistrationRequest;
-import com.carolinacode.customer.CustomerService;
-import com.carolinacode.customer.CustomerUpdateRequest;
+import com.carolinacode.customer.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +16,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 /*
 Anotacao para testar com SpringBoot. Nestes testes chamados Integration tests, que testam
-toda a aplicação através de pedidos API, já faz sentido ussar esta anotação porque "liga"
+toda a aplicação através de pedidos API, já faz sentido usar esta anotação porque "liga"
 a aplicação por completo.
  */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -35,8 +32,9 @@ public class CustomerIntegrationTest {
         String name = "cata";
         String email = "cata@gmail.com";
         int age = 23;
+        Gender gender =Gender.FEMALE;
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                name, email, age
+                name, email, age, gender
         );
 
         //send post request
@@ -59,7 +57,7 @@ public class CustomerIntegrationTest {
                 .getResponseBody();
 
         //verify that customer is present
-        Customer expectedCustomer = new Customer(name, email, age);
+        Customer expectedCustomer = new Customer(name, email, age, Gender.FEMALE);
 
         assertThat(allCustomers)
                 .usingRecursiveFieldByFieldElementComparatorIgnoringFields("id")
@@ -88,8 +86,9 @@ public class CustomerIntegrationTest {
         String name = "cate";
         String email = "cate@gmail.com";
         int age = 23;
+        Gender gender = Gender.FEMALE;
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                name, email, age
+                name, email, age, gender
         );
 
         //send post request
@@ -142,8 +141,9 @@ public class CustomerIntegrationTest {
         String name = "car";
         String email = "car@gmail.com";
         int age = 23;
+        Gender gender = Gender.MALE;
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                name, email, age
+                name, email, age, gender
         );
 
         //send post request
@@ -175,7 +175,7 @@ public class CustomerIntegrationTest {
         String newName = "caro";
         String newEmail = "caro@gmail.com";
         CustomerUpdateRequest updateRequest = new CustomerUpdateRequest(newName, newEmail, null);
-        Customer expectedCustomer = new Customer(id, newName, newEmail, age);
+        Customer expectedCustomer = new Customer(id, newName, newEmail, age, Gender.MALE);
 
         //fazer update do customer
         webTestClient.put()

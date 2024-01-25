@@ -47,7 +47,10 @@ function App() {
                 {customers.map((customer, index) => {
                     return (
                         <WrapItem key={index}>
-                            <CardWithImage {...customer}/>
+                            <CardWithImage
+                                {...customer}
+                                imageNumber={index}
+                            />
                         </WrapItem>
                     )
                 })}

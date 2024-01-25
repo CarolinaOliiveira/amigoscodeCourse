@@ -25,8 +25,8 @@ class CustomerRepositoryTest extends AbstractTestContainers { // ao fazer extend
     void existsCostumerByEmail() {
         String email = "manueli@gmail.com";
         Customer customer = new Customer(
-                "Manueli", email,58
-        );
+                "Manueli", email,58,
+                Gender.MALE);
         underTest.save(customer);
 
         boolean result = underTest.existsCostumerByEmail(email);

@@ -42,7 +42,7 @@ class CustomerServiceTest {
     void canGetCustomer() {
         //Given
         Integer id =  10;
-        Customer customer = new Customer(id, "alex", "alex@gmail.com", 19);
+        Customer customer = new Customer(id, "alex", "alex@gmail.com", 19, Gender.MALE);
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(customer)); //dizer ao mockito o comportamento do metodo
 
         //When
@@ -72,7 +72,7 @@ class CustomerServiceTest {
 
         //mapear o argumento recebido por addCustomer
         CustomerRegistrationRequest resquest = new CustomerRegistrationRequest(
-                "alex", email, 19
+                "alex", email, 19, Gender.MALE
         );
 
         //assumindo que a primeira condicao no metodo addCustomer dá falso, a execução do método continua ..
@@ -84,7 +84,7 @@ class CustomerServiceTest {
 
         ArgumentCaptor<Customer> customerArgumentCaptor = ArgumentCaptor.forClass(Customer.class);
 
-        //Then queremos verificar que insertCustomer foiinvocado e queremos capturar o valor que lhe foi passado como argumento
+        //Then queremos verificar que insertCustomer foivinvocado e queremos capturar o valor que lhe foi passado como argumento
         verify(customerDAO).insertCustomer(customerArgumentCaptor.capture());
         Customer capturedCustomer = customerArgumentCaptor.getValue();
 
@@ -101,7 +101,7 @@ class CustomerServiceTest {
         String email = "alex@gmail.com";
         //mapear o argumento recebido por addCustomer
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                "alex", email, 19
+                "alex", email, 19, Gender.MALE
         );
 
         when(customerDAO.existsPersonWithEmail(email)).thenReturn(true);
@@ -151,7 +151,7 @@ class CustomerServiceTest {
         String newEmail = "alexandre@gmail.com";
         CustomerUpdateRequest request = new CustomerUpdateRequest("Alexandre", newEmail, 23);
 
-        Customer oldCustomer = new Customer(id, "alex", "alex@gmail.com", 19);
+        Customer oldCustomer = new Customer(id, "alex", "alex@gmail.com", 19, Gender.MALE);
         //ir buscar o customer
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(oldCustomer));
 
@@ -178,7 +178,7 @@ class CustomerServiceTest {
         Integer id =  10;
         CustomerUpdateRequest request = new CustomerUpdateRequest("Alexandre", null, null);
 
-        Customer oldCustomer = new Customer(id, "alex", "alex@gmail.com", 19);
+        Customer oldCustomer = new Customer(id, "alex", "alex@gmail.com", 19, Gender.MALE);
         //ir buscar o customer
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(oldCustomer));
 
@@ -203,7 +203,7 @@ class CustomerServiceTest {
         String newEmail = "alexandre@gmail.com";
         CustomerUpdateRequest request = new CustomerUpdateRequest(null, newEmail, null);
 
-        Customer oldCustomer = new Customer(id, "alex", "alex@gmail.com", 19);
+        Customer oldCustomer = new Customer(id, "alex", "alex@gmail.com", 19, Gender.MALE);
         //ir buscar o customer
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(oldCustomer));
 
@@ -232,7 +232,7 @@ class CustomerServiceTest {
         Integer id =  10;
         CustomerUpdateRequest request = new CustomerUpdateRequest(null, null, 21);
 
-        Customer oldCustomer = new Customer(id, "alex", "alex@gmail.com", 19);
+        Customer oldCustomer = new Customer(id, "alex", "alex@gmail.com", 19, Gender.MALE);
         //ir buscar o customer
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(oldCustomer));
 
@@ -257,7 +257,7 @@ class CustomerServiceTest {
         String newEmail = "alexandre@gmail.com";
         CustomerUpdateRequest request = new CustomerUpdateRequest(null, newEmail, null);
 
-        Customer oldCustomer = new Customer(id, "alex", "alex@gmail.com", 19);
+        Customer oldCustomer = new Customer(id, "alex", "alex@gmail.com", 19, Gender.MALE);
         //ir buscar o customer
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(oldCustomer));
 
@@ -280,7 +280,7 @@ class CustomerServiceTest {
         Integer id =  10;
         String newEmail = "alexandre@gmail.com";
 
-        Customer oldCustomer = new Customer(id, "alex", "alex@gmail.com", 19);
+        Customer oldCustomer = new Customer(id, "alex", "alex@gmail.com", 19, Gender.MALE);
         //ir buscar o customer
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(oldCustomer));
 

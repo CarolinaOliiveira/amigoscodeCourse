@@ -1,16 +1,13 @@
 package com.carolinacode.customer;
 
 import com.carolinacode.AbstractTestContainers;
-import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
 
@@ -31,8 +28,8 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     @Test
     void selectAllCustomers() {
         Customer customer = new Customer(
-                "Manuel", "manuel@gmail.com",58
-        );
+                "Manuel", "manuel@gmail.com",58,
+                Gender.MALE);
         underTest.insertCustomer(customer);
 
         List<Customer> actual = underTest.selectAllCustomers();
@@ -45,8 +42,8 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     void selectCustomerById() {
         String email = "manuela@gmail.com";
         Customer customer = new Customer(
-                "Manuela", email,58
-        );
+                "Manuela", email,58,
+                Gender.MALE);
         underTest.insertCustomer(customer);
 
         int id = underTest.selectAllCustomers()
@@ -72,8 +69,8 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     void willReturnEmpty_selectCustomerById() {
         String email = "manuele@gmail.com";
         Customer customer = new Customer(
-                "Manuele", email,58
-        );
+                "Manuele", email,58,
+                Gender.MALE);
         underTest.insertCustomer(customer);
 
         int id = -1;
@@ -87,8 +84,8 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     void existsPersonWithEmail() {
         String email = "manueli@gmail.com";
         Customer customer = new Customer(
-                "Manueli", email,58
-        );
+                "Manueli", email,58,
+                Gender.MALE);
         underTest.insertCustomer(customer);
 
         boolean result = underTest.existsPersonWithEmail(email);
@@ -109,8 +106,8 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     void existsPersonWitId() {
         String email = "manuelo@gmail.com";
         Customer customer = new Customer(
-                "Manuelo", email,58
-        );
+                "Manuelo", email,58,
+                Gender.MALE);
         underTest.insertCustomer(customer);
 
         int id = underTest.selectAllCustomers()
@@ -138,8 +135,8 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     void deleteCustomerById() {
         String email = "manuelu@gmail.com";
         Customer customer = new Customer(
-                "Manuelu", email,58
-        );
+                "Manuelu", email,58,
+                Gender.MALE);
         underTest.insertCustomer(customer);
 
         int id = underTest.selectAllCustomers()
@@ -161,8 +158,8 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
 
         String email = "ana@gmail.com";
         Customer customer = new Customer(
-                "Ana", email,58
-        );
+                "Ana", email,58,
+                Gender.MALE);
         underTest.insertCustomer(customer);
 
         underTest.deleteCustomerById(id);
@@ -177,8 +174,8 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     void updateCustomer() {
         String email = "ane@gmail.com";
         Customer customer = new Customer(
-                "Ane", email,58
-        );
+                "Ane", email,58,
+                Gender.MALE);
         underTest.insertCustomer(customer);
 
         int id = underTest.selectAllCustomers()

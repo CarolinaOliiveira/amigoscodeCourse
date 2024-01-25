@@ -27,4 +27,4 @@ eb restore e-cpppbiucth
 
 Comandos para criar a base de dados customer (correr na instancia EC2)
 - docker run --rm -it postgres:alpine bach
-- pqsl -U amighoscode -d postgres -h link_db
+- pqsl -U amigoscode -d postgres -h link_db
