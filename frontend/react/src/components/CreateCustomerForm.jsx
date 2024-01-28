@@ -1,7 +1,7 @@
 import { FormLabel, Input, Alert, AlertIcon, Select, Box, Stack, Button} from '@chakra-ui/react'
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup'; //permite validar o form
-import saveCustomer from '../services/client.js'
+import { saveCustomer} from '../services/client.js'
 import { successNotification, errorNotification } from '../services/notification.js'
 
 const MyTextInput = ({ label, ...props }) => {
