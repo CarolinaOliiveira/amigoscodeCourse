@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="CORS, Axios, fetch Customers and Card component">
-      <change afterPath="$PROJECT_DIR$/.ci/build-publish.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/frontend-react-cd.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerrun.aws.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/react/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/react/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/react/src/components/UpdateCustomerDrawer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/react/src/components/UpdateCustomerForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Dockerrun.aws.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/notas terminal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/notas terminal.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/react/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/react/src/components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/src/components/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/react/src/components/DrawerForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/src/components/CreateCustomerDrawer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/react/src/services/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/src/services/client.js" afterDir="false" />
-    </list>
+    <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="test CD frontend react" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -258,7 +240,7 @@
       <workItem from="1706218985222" duration="4927000" />
       <workItem from="1706267562514" duration="17220000" />
       <workItem from="1706477540981" duration="4317000" />
-      <workItem from="1706529674298" duration="16994000" />
+      <workItem from="1706529674298" duration="17313000" />
     </task>
     <task id="LOCAL-00001" summary="workflow para o git actions">
       <created>1705538658122</created>
@@ -288,7 +270,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706220652485</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update customer react + CD frontend react">
+      <created>1706562903368</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706562903368</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test CD frontend react">
+      <created>1706563034576</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706563034576</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -318,7 +314,9 @@
     <MESSAGE value="workflow para o git actions" />
     <MESSAGE value="send slack message with commit message and sha" />
     <MESSAGE value="CORS, Axios, fetch Customers and Card component" />
-    <option name="LAST_COMMIT_MESSAGE" value="CORS, Axios, fetch Customers and Card component" />
+    <MESSAGE value="update customer react + CD frontend react" />
+    <MESSAGE value="test CD frontend react" />
+    <option name="LAST_COMMIT_MESSAGE" value="test CD frontend react" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
