@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="CORS, Axios, fetch Customers and Card component">
+      <change afterPath="$PROJECT_DIR$/.ci/build-publish.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/frontend-react-cd.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerrun.aws.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/src/components/UpdateCustomerDrawer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/react/src/components/UpdateCustomerForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerrun.aws.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/notas terminal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/notas terminal.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/react/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/react/src/components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/src/components/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/react/src/components/CreateCustomerForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/src/components/CreateCustomerForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/react/src/components/DrawerForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/src/components/CreateCustomerDrawer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/react/src/services/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/src/services/client.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +91,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ccoto/OneDrive/Ambiente de Trabalho/amigoscodeCourse/backend/src/main/resources/db/migration&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ccoto/OneDrive/Ambiente de Trabalho/amigoscodeCourse/frontend/react/src/components/shared&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -100,6 +112,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ccoto\OneDrive\Ambiente de Trabalho\amigoscodeCourse\frontend\react\src\components\shared" />
       <recent name="C:\Users\ccoto\OneDrive\Ambiente de Trabalho\amigoscodeCourse\backend\src\main\resources\db\migration" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -244,7 +257,8 @@
       <workItem from="1706098727947" duration="16774000" />
       <workItem from="1706218985222" duration="4927000" />
       <workItem from="1706267562514" duration="17220000" />
-      <workItem from="1706477540981" duration="367000" />
+      <workItem from="1706477540981" duration="4317000" />
+      <workItem from="1706529674298" duration="16994000" />
     </task>
     <task id="LOCAL-00001" summary="workflow para o git actions">
       <created>1705538658122</created>

@@ -28,3 +28,9 @@ eb restore e-cpppbiucth
 Comandos para criar a base de dados customer (correr na instancia EC2)
 - docker run --rm -it postgres:alpine bach
 - pqsl -U amigoscode -d postgres -h link_db
+
+correr docker frontend
+- docker run --rm --name frontend-react -p 3000:5173 pg47101/amigoscode-react
+
+criar imagem frontend para funcionar no deployment:
+- docker build . -t pg47101/amigoscode-react:aws --build-arg api_base_url=http://amigoscode-api-env.eba-ugqm2msm.eu-west-3.elasticbeanstalk.com:8080

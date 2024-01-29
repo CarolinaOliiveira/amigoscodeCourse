@@ -3,7 +3,7 @@ import SidebarWithHeader from './components/shared/SideBar.jsx'
 import  { useEffect, useState } from 'react'
 import { getCustomers } from './services/client.js'
 import CardWithImage from './components/Card.jsx'
-import DrawerForm from './components/DrawerForm.jsx'
+import CreateCustomerDrawer from './components/CreateCustomerDrawer.jsx'
 import {errorNotification } from './services/notification.js'
 
 function App() {
@@ -17,12 +17,13 @@ function App() {
         setLoading(true)
         getCustomers().then(res => {
             setCustomers(res.data)
-        }).catch(err =>{
-            setErr(err.response.data.message)
+        }).catch(error =>{
+            console.log(error)
+            /*setErr(err.response.data.message)
             errorNotification(
                 err.code,
                 err.response.data.message
-            )
+            )*/
         }).finally(() => {
             setLoading(false)
         })
@@ -49,7 +50,7 @@ function App() {
     if(err){
         return (
             <SidebarWithHeader>
-                <DrawerForm
+                <CreateCustomerDrawer
                     fetchCustomers={fetchCustomers}
                 />
                 <Text mt={5}> Ooops there was an error</Text>
@@ -60,7 +61,7 @@ function App() {
     if(customers.length <= 0) {
         return (
             <SidebarWithHeader>
-                <DrawerForm
+                <CreateCustomerDrawer
                     fetchCustomers={fetchCustomers}
                 />
                 <Text mt={5}>No customers available</Text>
@@ -71,7 +72,7 @@ function App() {
     //opção em que temos customers
     return (
         <SidebarWithHeader>
-            <DrawerForm
+            <CreateCustomerDrawer
                 fetchCustomers={fetchCustomers}
             />
             <Wrap justify={"center"} spacing ={'30px'}>
