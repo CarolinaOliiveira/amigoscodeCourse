@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "amigoscode-react",
-      "image": "pg47101/amigoscode-react:aws",
+      "image": "pg47101/amigoscode-react:29.01.2024.21.21.34",
       "essential": true,
       "memory": 256,
       "portMappings": [
@@ -15,7 +15,7 @@
     },
     {
       "name": "amigoscode-api",
-      "image": "pg47101/amigoscode-api:25.01.2024.22.13.22",
+      "image": "pg47101/amigoscode-api:29.01.2024.21.15.49",
       "essential": true,
       "memory": 512,
       "portMappings": [
@@ -27,7 +27,7 @@
       "environment": [
         {
           "name": "SPRING_DATASOURCE_URL",
-          "value": "jdbc:postgresql://awseb-e-cpppbiucth-stack-awsebrdsdatabase-xpib9s8sdsnw.crmoqeq2mqmz.eu-west-3.rds.amazonaws.com:5432/customer"
+          "value": "jdbc:postgresql://awseb-e-cpppbiucth-stack-awsebrdsdatabase-d2fm97pvpky3.crmoqeq2mqmz.eu-west-3.rds.amazonaws.com:5432/customer"
         }
       ]
     }

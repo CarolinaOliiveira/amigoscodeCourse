@@ -28,7 +28,7 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     @Test
     void selectAllCustomers() {
         Customer customer = new Customer(
-                "Manuel", "manuel@gmail.com",58,
+                "Manuel", "manuel@gmail.com", "password", 58,
                 Gender.MALE);
         underTest.insertCustomer(customer);
 
@@ -42,7 +42,7 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     void selectCustomerById() {
         String email = "manuela@gmail.com";
         Customer customer = new Customer(
-                "Manuela", email,58,
+                "Manuela", email, "password", 58,
                 Gender.MALE);
         underTest.insertCustomer(customer);
 
@@ -69,7 +69,7 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     void willReturnEmpty_selectCustomerById() {
         String email = "manuele@gmail.com";
         Customer customer = new Customer(
-                "Manuele", email,58,
+                "Manuele", email, "password", 58,
                 Gender.MALE);
         underTest.insertCustomer(customer);
 
@@ -84,7 +84,7 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     void existsPersonWithEmail() {
         String email = "manueli@gmail.com";
         Customer customer = new Customer(
-                "Manueli", email,58,
+                "Manueli", email, "password", 58,
                 Gender.MALE);
         underTest.insertCustomer(customer);
 
@@ -106,7 +106,7 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     void existsPersonWitId() {
         String email = "manuelo@gmail.com";
         Customer customer = new Customer(
-                "Manuelo", email,58,
+                "Manuelo", email, "password", 58,
                 Gender.MALE);
         underTest.insertCustomer(customer);
 
@@ -135,7 +135,7 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     void deleteCustomerById() {
         String email = "manuelu@gmail.com";
         Customer customer = new Customer(
-                "Manuelu", email,58,
+                "Manuelu", email, "password", 58,
                 Gender.MALE);
         underTest.insertCustomer(customer);
 
@@ -158,7 +158,7 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
 
         String email = "ana@gmail.com";
         Customer customer = new Customer(
-                "Ana", email,58,
+                "Ana", email, "password", 58,
                 Gender.MALE);
         underTest.insertCustomer(customer);
 
@@ -174,7 +174,7 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
     void updateCustomer() {
         String email = "ane@gmail.com";
         Customer customer = new Customer(
-                "Ane", email,58,
+                "Ane", email, "password", 58,
                 Gender.MALE);
         underTest.insertCustomer(customer);
 
