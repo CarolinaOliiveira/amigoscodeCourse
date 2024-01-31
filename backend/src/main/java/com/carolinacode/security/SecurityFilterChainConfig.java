@@ -36,6 +36,8 @@ public class SecurityFilterChainConfig {
                 .requestMatchers(HttpMethod.POST,
                         "/api/v1/customers","/api/v1/auth/login") // permite pedidos POST para "/api/v1/customers" e "api/v1/auth/login" sem ser necessário autenticação
                 .permitAll()
+                .requestMatchers(HttpMethod.GET, "/ping")
+                .permitAll()
                 .anyRequest()// qualquer outro request deve ser autenticado
                 .authenticated()
                 .and()
