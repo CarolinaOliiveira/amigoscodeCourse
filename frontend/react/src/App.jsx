@@ -2,7 +2,7 @@ import { Button, Spinner, Text, Wrap, WrapItem } from '@chakra-ui/react'
 import SidebarWithHeader from './components/shared/SideBar.jsx'
 import  { useEffect, useState } from 'react'
 import { getCustomers } from './services/client.js'
-import CardWithImage from './components/Card.jsx'
+import CardWithImage from './components/CustomerCard.jsx'
 import CreateCustomerDrawer from './components/CreateCustomerDrawer.jsx'
 import {errorNotification } from './services/notification.js'
 
@@ -19,11 +19,11 @@ function App() {
             setCustomers(res.data)
         }).catch(error =>{
             console.log(error)
-            /*setErr(err.response.data.message)
+            setErr(error.response.data.message)
             errorNotification(
-                err.code,
-                err.response.data.message
-            )*/
+                error.code,
+                error.response.data.message
+            )
         }).finally(() => {
             setLoading(false)
         })
