@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="backend with secutiry and authentication">
+    <list default="true" id="1d8454e7-c0d5-4b27-baf7-6f4ebfb1b61c" name="Changes" comment="React login e registo">
       <change afterPath="$PROJECT_DIR$/frontend/react/src/components/CustomerCard.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/frontend/react/src/components/login/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
@@ -295,7 +295,7 @@
       <workItem from="1706698681429" duration="27865000" />
       <workItem from="1706797295767" duration="6211000" />
       <workItem from="1706870608155" duration="3616000" />
-      <workItem from="1707131184562" duration="1933000" />
+      <workItem from="1707131184562" duration="2546000" />
     </task>
     <task id="LOCAL-00001" summary="workflow para o git actions">
       <created>1705538658122</created>
@@ -346,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706563271063</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="React login e registo">
+      <created>1707142847971</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707142847971</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -379,7 +386,8 @@
     <MESSAGE value="update customer react + CD frontend react" />
     <MESSAGE value="test CD frontend react" />
     <MESSAGE value="backend with secutiry and authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="backend with secutiry and authentication" />
+    <MESSAGE value="React login e registo" />
+    <option name="LAST_COMMIT_MESSAGE" value="React login e registo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
